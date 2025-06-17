@@ -1,3 +1,9 @@
+pve-zsync (2.4.0) trixie; urgency=medium
+
+  * rebuild for Debian 13 Trixie based releases.
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 17 Jun 2025 19:52:36 +0200
+
 pve-zsync (2.3.1) bookworm; urgency=medium
 
   * improve error messages related to getting disks from the guest config
