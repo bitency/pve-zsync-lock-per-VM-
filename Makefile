@@ -17,6 +17,10 @@ DSC=$(PACKAGE)_$(DEB_VERSION_UPSTREAM_REVISION).dsc
 
 all:
 
+.PHONY: tidy
+tidy:
+	proxmox-perltidy pve-zsync
+
 .PHONY: dinstall
 dinstall: deb
 	dpkg -i $(DEB)
