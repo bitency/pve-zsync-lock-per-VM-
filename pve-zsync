@@ -528,8 +528,9 @@ sub vm_exists {
 sub init {
     my ($param) = @_;
 
-    locked(
-        "$CONFIG_PATH/cron_and_state.lock",
+    	my $lock_target = $param->{source};
+	$lock_target =~ s/[^a-zA-Z0-9]/_/g;  # veilig bestandsnaam
+	locked("$CONFIG_PATH/sync_$lock_target.lock", sub {
         sub {
             my $cfg = read_cron();
 
