@@ -530,7 +530,7 @@ sub init {
 
     	my $lock_target = $param->{source};
 	$lock_target =~ s/[^a-zA-Z0-9]/_/g;  # veilig bestandsnaam
-	locked("$CONFIG_PATH/sync_$lock_target.lock", sub {
+	locked("$CONFIG_PATH/sync_$lock_target.lock",
         sub {
             my $cfg = read_cron();
 
